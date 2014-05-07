@@ -1,0 +1,65 @@
+############################
+# Top Group
+############################
+[default:children]
+dev
+hadoop_cdh5_pseudo
+cdh5_cluster
+temporary
+
+###########################
+# For Development (CUI Env)
+###########################
+[dev]
+
+#####################
+# hadoop_cdh5_pseudo
+#####################
+[hadoop_cdh5_pseudo]
+cdh5-pseudo
+
+#####################
+# cdh5_cluster
+#####################
+[cdh5_cluster:children]
+cdh5_nn
+cdh5_snn
+cdh5_rm
+cdh5_sl
+cdh5_cl
+cdh5_ot
+
+[cdh5_nn]
+cdh5-nn-01
+
+[cdh5_snn]
+cdh5-snn-01
+
+[cdh5_rm]
+cdh5-rm-01
+
+[cdh5_sl]
+cdh5-sl-01
+cdh5-sl-02
+cdh5-sl-03
+
+[cdh5_cl]
+cdh5-cl-01
+
+[cdh5_ot]
+cdh5-ot-01
+
+#####################
+# Temporary
+#####################
+[temporary:children]
+tmp_dev
+tmp_cluster
+
+[tmp_dev]
+tmp-dev
+
+[tmp_cluster]
+tmp-01
+tmp-02
+tmp-03
