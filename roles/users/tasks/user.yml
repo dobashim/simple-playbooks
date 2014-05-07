@@ -1,0 +1,7 @@
+# file: roles/users/tasks/user.yml
+
+- name: add_users
+  user: name={{ item }} groups=wheel
+  with_items: users_list
+  tags:
+    - users

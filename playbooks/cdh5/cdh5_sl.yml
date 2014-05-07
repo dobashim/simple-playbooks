@@ -1,0 +1,12 @@
+#file: playbooks/cdh5/cdh5_sl.yml
+
+- hosts: "{{ server | default('cdh5_sl') }}"
+  roles:
+    - common
+    - users
+    - screen
+    - ntp
+    - prompt
+    - epel
+    - jdk
+    - cdh5_sl

@@ -1,0 +1,5 @@
+# file: roles/common/tasks/main.yml
+
+- include: install.yml tags=install
+- include: conf.yml tags=conf
+- include: service.yml tags=service

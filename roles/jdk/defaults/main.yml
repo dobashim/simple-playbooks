@@ -1,0 +1,5 @@
+jdk_direct: False
+jdk_direct_path: '/home/vagrant/Downloads/jdk-7u51-linux-x64.rpm'
+jdk_use_oraclejdk: True
+jdk_use_openjdk: False
+jdk_oracle_version: '1.7.0_51'

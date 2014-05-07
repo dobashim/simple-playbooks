@@ -1,0 +1,6 @@
+# oraclejdk.repo
+
+[oraclejdk]
+name=oraclejdk
+mirrorlist=file:///etc/yum.repos.d/mirror_of_oraclejdk
+gpgcheck=0

@@ -1,0 +1,22 @@
+# file: roles/users/tasks/conf.yml
+
+- name: copy_wheel_to_sudoers.d
+  copy: src=wheel dest=/etc/sudoers.d/wheel mode=440 owner=root
+  tags:
+    - users
+
+- name: copy_env_keep_path_to_sudoers.d
+  copy: src=env_keep_path dest=/etc/sudoers.d/ mode=440 owner=root
+  tags:
+    - users
+
+- name: copy_env_keep_proxy_to_sudoers.d
+  copy: src=env_keep_proxy dest=/etc/sudoers.d/ mode=440 owner=root
+  tags:
+    - users
+
+- name: copy_sudoers
+  copy: src=sudoers dest=/etc mode=440
+  tags:
+    - users
+

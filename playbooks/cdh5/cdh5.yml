@@ -1,0 +1,8 @@
+#file: playbooks/cdh5/cdh5.yml
+
+- include: cdh5_nn.yml
+- include: cdh5_snn.yml
+- include: cdh5_rm.yml
+- include: cdh5_sl.yml
+- include: cdh5_cl.yml
+- include: cdh5_ot.yml

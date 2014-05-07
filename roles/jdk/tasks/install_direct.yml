@@ -1,0 +1,10 @@
+# file: roles/jdk/tasks/install_direct.yml
+
+- name: check_jdk_installed
+  shell: rpm -qa|grep jdk-{{ jdk_oracle_version }}
+  ignore_errors: yes
+  register: check_jdk_installed
+
+- name: install_jdk_direct
+  shell: rpm -Uvh {{ jdk_direct_path }}
+  when: check_jdk_installed.rc != 0

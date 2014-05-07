@@ -1,0 +1,9 @@
+# file: roles/jdk/tasks/main.yml
+
+- include: repo.yml tags=jdk
+  when: jdk_direct == False
+- include: install.yml tags=jdk
+  when: jdk_direct == False
+- include: install_direct.yml tags=jdk
+  when: jdk_direct == True
+- include: conf.yml tags=jdk

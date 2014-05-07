@@ -1,0 +1,4 @@
+# file: roles/screen/tasks/main.yml
+
+- include: install.yml
+- include: conf.yml

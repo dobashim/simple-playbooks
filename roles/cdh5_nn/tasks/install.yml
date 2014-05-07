@@ -1,0 +1,6 @@
+# file: roles/hadoop_cdh5_nn/tasks/install.yml
+
+- name: install_hadoop_cdh5_nn
+  yum: name=hadoop-hdfs-namenode state=installed
+  tags:
+    - cdh5_nn

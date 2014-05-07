@@ -1,0 +1,14 @@
+# file: roles/common/tasks/install.yml
+
+- name: install_common_softwares
+  yum: name={{ item }} state=installed
+  with_items:
+    - vim
+    - zip
+    - unzip
+    - man
+    - rpm-build
+    - make
+    - glib2-devel
+  tags:
+    - common

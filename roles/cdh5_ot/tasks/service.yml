@@ -1,0 +1,6 @@
+# file: roles/cdh5_ot/tasks/service.yml
+
+- name: disable_historyserver_on_startup
+  service: name={{ item }} enabled=no
+  with_items:
+    - hadoop-mapreduce-historyserver

@@ -1,0 +1,21 @@
+# file: roles/cdh5_nn/tasks/user.yml
+
+- name: add_mapred_group
+  group: name=mapred state=present
+  tags:
+    - cdh5_nn
+
+- name: add_mapred_user
+  user: name=mapred group=mapred groups=hadoop
+  tags:
+    - cdh5_nn
+
+- name: add_yarn_group
+  group: name=yarn state=present
+  tags:
+    - cdh5_nn
+
+- name: add_yarn_user
+  user: name=yarn group=yarn groups=hadoop
+  tags:
+    - cdh5_nn

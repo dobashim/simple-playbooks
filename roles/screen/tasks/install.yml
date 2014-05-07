@@ -1,0 +1,6 @@
+# file: roles/screen/tasks/install.yml
+
+- name: install_screen
+  yum: name=screen state=installed
+  tags:
+    - screen

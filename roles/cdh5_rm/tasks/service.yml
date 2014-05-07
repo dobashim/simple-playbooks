@@ -1,0 +1,6 @@
+# file: roles/cdh5_rm/tasks/service.yml
+
+- name: disable_rm_on_startup
+  service: name={{ item }} enabled=no
+  with_items:
+    - hadoop-yarn-resourcemanager 

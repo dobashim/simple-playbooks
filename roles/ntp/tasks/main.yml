@@ -1,0 +1,4 @@
+# file: roles/ntp/tasks/main.yml
+
+- include: install.yml
+- include: service.yml

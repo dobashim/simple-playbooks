@@ -1,0 +1,6 @@
+# file: roles/screen/tasks/conf.yml
+
+- name: copy_screenrc
+  copy: src=screenrc dest=/etc/screenrc
+  tags:
+    - screen

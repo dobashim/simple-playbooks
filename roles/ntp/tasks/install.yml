@@ -1,0 +1,6 @@
+# file: roles/ntp/tasks/install.yml
+
+- name: install_ntp
+  yum: name=ntp state=installed
+  tags:
+    - ntp

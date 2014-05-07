@@ -1,0 +1,12 @@
+#file: playbooks/hadoop_cdh5_pseduo/hadoop_cdh5_pseudo.yml
+
+- hosts: "{{ server | default('hadoop_cdh5_pseudo') }}"
+  roles:
+    - common
+    - users
+    - screen
+    - ntp
+    - prompt
+    - epel
+    - jdk
+    - hadoop_cdh5_pseudo

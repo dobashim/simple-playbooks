@@ -1,0 +1,6 @@
+# file: roles/ntp/tasks/service.yml
+
+- name: start_ntpd
+  service: name=ntpd state=running
+  tags:
+    - ntp

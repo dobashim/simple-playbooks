@@ -1,0 +1,7 @@
+# file: roles/ansible/tasks/install.yml
+
+- name: install_sshpass
+  yum: name=sshpass state=installed
+  tags:
+    - ansible
+  

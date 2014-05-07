@@ -1,0 +1,4 @@
+# file: roles/common/defaults/main.yml
+
+common_iptables_stopped: False
+common_hosts_enabled: True

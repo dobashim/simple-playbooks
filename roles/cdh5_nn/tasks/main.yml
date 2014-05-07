@@ -1,0 +1,7 @@
+# file: roles/hadoop_cdh5_nn/tasks/main.yml
+
+- include: repo.yml
+- include: install.yml
+- include: conf.yml
+- include: additional_user.yml
+- include: service.yml

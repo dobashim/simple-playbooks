@@ -1,0 +1,7 @@
+# file: roles/epel/tasks/conf.yml
+
+- name: copy_epel_yum_config
+  copy: src=epel.repo dest=/etc/yum.repos.d/epel.repo
+  when: ansible_distribution == 'CentOS'
+  tags:
+    - epel

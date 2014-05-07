@@ -1,0 +1,6 @@
+# file: roles/hadoop_cdh5_cl/tasks/install.yml
+
+- name: install_hadoop_cdh5
+  yum: name=hadoop state=installed
+  tags:
+    - cdh5

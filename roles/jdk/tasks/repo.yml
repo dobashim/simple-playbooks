@@ -1,0 +1,9 @@
+# file: roles/jdk/tasks/repo.yml
+
+- name: copy_repo_conf_of_oraclejdk
+  copy: src=oraclejdk.repo dest=/etc/yum.repos.d/oraclejdk.repo
+  when: jdk_use_oraclejdk
+
+- name: copy_mirror_of_oraclejdk
+  template: src=mirror_of_oraclejdk dest=/etc/yum.repos.d/mirror_of_oraclejdk
+  when: jdk_use_oraclejdk

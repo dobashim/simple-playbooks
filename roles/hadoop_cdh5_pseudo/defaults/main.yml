@@ -1,0 +1,4 @@
+# file: roles/hadoop_cdh5_pseudo/defaults/main.yml
+
+hadoop_cdh5_pseudo_fs_default_name: 'hdfs://cdh5-pseudo:8020'
+hadoop_cdh5_pseudo_mapred_job_tracker: 'cdh5-pseudo:8021'
