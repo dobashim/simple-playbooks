@@ -1,7 +1,0 @@
-# file: roles/hadoop_cdh5_pseudo/tasks/conf.yml
-
-- name: copy_core_site.xml
-  template: src=core-site.xml.j2 dest=/etc/hadoop/conf/core-site.xml
-
-- name: copy_mapred_site.xml
-  template: src=mapred-site.xml.j2 dest=/etc/hadoop/conf/mapred-site.xml
