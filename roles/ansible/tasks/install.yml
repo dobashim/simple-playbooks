@@ -2,6 +2,3 @@
 
 - name: install_sshpass
   yum: name=sshpass state=installed
-  tags:
-    - ansible
-  

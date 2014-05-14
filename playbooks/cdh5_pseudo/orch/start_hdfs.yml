@@ -1,0 +1,12 @@
+# file: single_shot/hadoop_cdh5_pseudo/start_hdfs.yml
+
+- hosts: hadoop_cdh5_pseudo
+  gather_facts: no
+  user: root
+  tasks:
+    - name: start_daemons
+      service: name={{ item }} state=started
+      with_items:
+        -  hadoop-hdfs-namenode
+        -  hadoop-hdfs-datanode
+        -  hadoop-hdfs-secondarynamenode

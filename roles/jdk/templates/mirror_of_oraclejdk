@@ -1,3 +1,3 @@
-{% for url in proprietary_yum_repo_baseurl %}
-{{ url }}/oraclejdk
+{% for url in jdk_yum_repo_url %}
+{{ url }}
 {% endfor %}

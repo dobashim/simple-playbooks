@@ -1,0 +1,9 @@
+# file: single_shot/hadoop_cdh5_pseudo/format_hdfs.yml
+
+- hosts: hadoop_cdh5_pseudo
+  gather_facts: no
+  sudo: True
+  sudo_user: hdfs
+  tasks:
+    - name: format_hdfs
+      shell: yes | hdfs namenode -format

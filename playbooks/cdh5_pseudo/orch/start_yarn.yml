@@ -1,0 +1,13 @@
+# file: single_shot/hadoop_cdh5_pseudo/start_yarn.yml
+
+- hosts: hadoop_cdh5_pseudo
+  gather_facts: no
+  user: root
+  tasks:
+    - name: start_daemons
+      service: name={{ item }} state=started
+      with_items:
+        - hadoop-yarn-resourcemanager 
+        - hadoop-yarn-nodemanager
+        - hadoop-mapreduce-historyserver
+

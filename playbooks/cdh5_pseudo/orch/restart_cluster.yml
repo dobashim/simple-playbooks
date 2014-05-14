@@ -1,0 +1,6 @@
+# file: single_shot/cdh5_pseudo/restart_cluster.yml
+
+- include: stop_yarn.yml
+- include: stop_hdfs.yml
+- include: start_hdfs.yml
+- include: start_yarn.yml

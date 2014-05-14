@@ -1,0 +1,13 @@
+#############################
+# OS and the base midleware
+#############################
+
+#==========
+#common
+#==========
+common_hosts_tmpl: 'hosts.default'
+
+#======================
+# Ansible
+#======================
+ansible_environment: 'default'

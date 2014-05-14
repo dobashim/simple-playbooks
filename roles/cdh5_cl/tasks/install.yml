@@ -1,6 +1,0 @@
-# file: roles/hadoop_cdh5_cl/tasks/install.yml
-
-- name: install_hadoop_cdh5_client
-  yum: name=hadoop-client state=installed
-  tags:
-    - cdh5_cl

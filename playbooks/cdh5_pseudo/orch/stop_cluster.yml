@@ -1,0 +1,4 @@
+# file: single_shot/cdh5_pseudo/stop_cluster.yml
+
+- include: stop_yarn.yml
+- include: stop_hdfs.yml

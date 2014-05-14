@@ -1,9 +1,16 @@
 # file: roles/jdk/tasks/main.yml
 
-- include: repo.yml tags=jdk
+# repo
+- include: repo.yml tags=jdk,repo
   when: jdk_direct == False
-- include: install.yml tags=jdk
-  when: jdk_direct == False
-- include: install_direct.yml tags=jdk
-  when: jdk_direct == True
-- include: conf.yml tags=jdk
+
+# install
+- include: install_openjdk.yml tags=jdk,install
+  when: jdk_use_openjdk == True
+- include: install_oraclejdk.yml tags=jdk,install
+  when: jdk_direct == False and jdk_use_oraclejdk == True
+- include: install_direct.yml tags=jdk,install
+  when: jdk_direct == True and jdk_use_oraclejdk == True
+
+# conf
+- include: conf.yml tags=jdk,conf

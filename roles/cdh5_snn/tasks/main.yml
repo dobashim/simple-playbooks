@@ -1,6 +1,0 @@
-# file: roles/cdh5_snn/tasks/main.yml
-
-- include: repo.yml
-- include: install.yml
-- include: conf.yml
-- include: service.yml

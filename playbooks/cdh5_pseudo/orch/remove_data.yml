@@ -1,0 +1,14 @@
+# file: single_shot/cdh5_pseudo/remove_data.yml
+
+- hosts: hadoop_cdh5_pseudo
+  vars:
+    time: "{{ ansible_date_time.date }}_{{ ansible_date_time.hour }}_{{ ansible_date_time.minute }}_{{ ansible_date_time.second }}"
+  tasks:
+    - name: mkdir_tmp_dir
+      file: path=/tmp/dfs_dn/{{ time }} state=directory recurse=yes
+
+    - name: remove_data_dir
+      shell: mv -f {{ item }}/* /tmp/dfs_dn/{{ time }}/
+      ignore_errors: yes
+      with_items:
+        - /var/lib/hadoop-hdfs/cache/hdfs/dfs/data

@@ -1,0 +1,6 @@
+# file: roles/jdk/tasks/install_oraclejdk.yml
+
+- name: install_oraclejdk
+  yum: name=jdk-{{ jdk_oracle_version }} state=installed
+  when: jdk_use_oraclejdk
+  

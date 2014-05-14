@@ -1,4 +1,4 @@
 # file: roles/ansible/tasks/main.yml
 
-- include: install.yml
-- include: conf.yml
+- include: install.yml tags=ansible
+- include: conf.yml tags=ansible

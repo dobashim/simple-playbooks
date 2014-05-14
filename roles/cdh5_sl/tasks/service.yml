@@ -1,8 +1,0 @@
-# file: roles/cdh5_sl/defaults/service.yml
-
-- name: stop_serivce_at_start
-  service: name={{ item }} enabled=no
-  with_items: 
-    - hadoop-hdfs-datanode
-    - hadoop-yarn-nodemanager
-

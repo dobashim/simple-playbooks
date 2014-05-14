@@ -1,0 +1,7 @@
+# file: roles/jdk/tasks/install_openjdk.yml
+
+- name: install_openjdk17
+  yum: name=java-1.7.0-openjdk state=installed
+
+- name: install_openjdk17_devel
+  yum: name=java-1.7.0-openjdk-devel state=installed

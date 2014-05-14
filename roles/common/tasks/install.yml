@@ -10,5 +10,3 @@
     - rpm-build
     - make
     - glib2-devel
-  tags:
-    - common

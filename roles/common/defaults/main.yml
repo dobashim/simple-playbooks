@@ -1,4 +1,10 @@
 # file: roles/common/defaults/main.yml
 
+# Whether to stop iptables
 common_iptables_stopped: False
+
+# Whether to copy /etc/hosts
 common_hosts_enabled: True
+
+# The name of **hosts** template
+common_hosts_tmpl: 'hosts.default'

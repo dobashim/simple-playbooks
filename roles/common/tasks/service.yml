@@ -3,5 +3,3 @@
 - name: stop_iptables
   service: name=iptables state=stopped enabled=no
   when: common_iptables_stopped and ansible_distribution == 'CentOS'
-  tags:
-    - common

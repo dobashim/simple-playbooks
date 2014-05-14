@@ -1,5 +1,12 @@
+# Parameters for installation of Oracle JDK from the local repository
+jdk_use_oraclejdk: True
+jdk_yum_repo_url:
+  - 'http://192.168.33.2/repos/oraclejdk'
+jdk_oracle_version: '1.7.0_51'
+
+# Parameters for installation of Oracle JDK directly from the local filesystem
 jdk_direct: False
 jdk_direct_path: '/home/vagrant/Downloads/jdk-7u51-linux-x64.rpm'
-jdk_use_oraclejdk: True
+
+# Parameters for installation of Open JDK
 jdk_use_openjdk: False
-jdk_oracle_version: '1.7.0_51'

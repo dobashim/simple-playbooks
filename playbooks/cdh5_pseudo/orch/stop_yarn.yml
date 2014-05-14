@@ -1,0 +1,14 @@
+# file: single_shot/hadoop_cdh5_pseudo/stop_yarn.yml
+
+- hosts: hadoop_cdh5_pseudo
+  gather_facts: no
+  user: root
+  tasks:
+    - name: stop_daemons
+      service: name={{ item }} state=stopped
+      with_items:
+        - hadoop-yarn-resourcemanager 
+        - hadoop-yarn-nodemanager
+        - hadoop-mapreduce-historyserver
+
+

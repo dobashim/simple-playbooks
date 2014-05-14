@@ -1,6 +1,0 @@
-# file: roles/cdh5_snn/tasks/install.yml
-
-- name: install_cdh5_snn
-  yum: name=hadoop-hdfs-secondarynamenode state=installed
-  tags:
-    - cdh5_snn

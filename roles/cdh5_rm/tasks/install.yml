@@ -1,6 +1,0 @@
-# file: roles/hadoop_cdh5_rm/tasks/install.yml
-
-- name: install_cdh5_rm
-  yum: name=hadoop-yarn-resourcemanager state=installed
-  tags:
-    - cdh5_rm

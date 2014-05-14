@@ -1,0 +1,13 @@
+# file: single_shot/hadoop_cdh5_pseudo/stop_hdfs.yml
+
+- hosts: hadoop_cdh5_pseudo
+  gather_facts: no
+  user: root
+  tasks:
+    - name: stop_daemons
+      service: name={{ item }} state=stopped
+      with_items:
+        -  hadoop-hdfs-namenode
+        -  hadoop-hdfs-datanode
+        -  hadoop-hdfs-secondarynamenode
+

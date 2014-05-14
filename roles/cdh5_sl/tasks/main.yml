@@ -1,6 +1,0 @@
-# file: roles/hadoop_cdh5_slave/tasks/main.yml
-
-- include: repo.yml
-- include: install.yml
-- include: conf.yml
-- include: service.yml
