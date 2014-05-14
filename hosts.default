@@ -2,15 +2,8 @@
 # Top Group
 ############################
 [default:children]
-dev
 hadoop_cdh5_pseudo
 cdh5_cluster
-temporary
-
-###########################
-# For Development (CUI Env)
-###########################
-[dev]
 
 #####################
 # hadoop_cdh5_pseudo
@@ -48,18 +41,3 @@ cdh5-cl-01
 
 [cdh5_ot]
 cdh5-ot-01
-
-#####################
-# Temporary
-#####################
-[temporary:children]
-tmp_dev
-tmp_cluster
-
-[tmp_dev]
-tmp-dev
-
-[tmp_cluster]
-tmp-01
-tmp-02
-tmp-03
